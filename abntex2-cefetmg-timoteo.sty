@@ -1,0 +1,68 @@
+\ProvidesPackage{abntex2-cefetmg-timoteo}[2015/08/26 Criacao desta customizacao do abnTeX2]
+
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    \ABNTEXchapterfont\large\textbf{CENTRO FEDERAL DE EDUCA\c{C}\~{A}O TECNOL\'{O}GICA DE MINAS GERAIS\\CAMPUS TIM\'{O}TEO}
+    
+    \vspace*{1cm}
+    
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vfill
+    \ABNTEXchapterfont\bfseries\Large\expandafter\MakeUppercase\expandafter{\textbf{\imprimirtitulo}}
+    \vfill
+    
+    {\large\imprimirlocal}
+
+    {\large\imprimirdata}
+    
+    \vspace*{1cm}
+  \end{capa}
+}
+
+
+\makeatletter
+
+\renewcommand{\folhaderostocontent}{
+\begin{center}
+{\ABNTEXchapterfont\large\textbf{\imprimirautor}}
+
+\vspace*{\fill}\vspace*{\fill}
+\vspace*{\fill}\vspace*{\fill}
+
+\begin{center}
+\ABNTEXchapterfont\bfseries\Large\expandafter\MakeUppercase\expandafter{\imprimirtitulo}
+\end{center}
+
+\abntex@ifnotempty{\imprimirpreambulo}{%
+  \hspace{.45\textwidth}
+  \begin{minipage}{.5\textwidth}
+  \SingleSpacing
+  \imprimirpreambulo
+  \newline\newline
+  \imprimirorientadorRotulo~\imprimirorientador
+  \abntex@ifnotempty{\imprimircoorientador}{%
+  {\newline\large\imprimircoorientadorRotulo~\imprimircoorientador}%
+  }%
+
+    \end{minipage}%
+  \vspace*{\fill}
+}%
+
+\vspace*{\fill}
+
+{\large\imprimirlocal}
+
+\par
+
+{\large\imprimirdata}
+\vspace*{1cm}
+\end{center}
+}
+
+\makeatother
+
+% ---
+% FIM DAS CUSTOMIZACOES PARA A TIMOTEO-CEFETMG
+% ---

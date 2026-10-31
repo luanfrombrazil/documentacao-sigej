@@ -1,0 +1,153 @@
+\documentclass[
+	11pt,
+	openright,
+	oneside,
+	a4paper,
+	english,
+	french,	
+	spanish,
+	brazil,
+	]{abntex2}
+
+\usepackage{abntex2-cefetmg-timoteo}
+\usepackage{cmap}				
+\usepackage{lmodern}			
+\usepackage[T1]{fontenc}		
+\usepackage[utf8]{inputenc}		
+\usepackage{lastpage}			
+\usepackage{indentfirst}		
+\usepackage{color}				
+\usepackage{graphicx}
+% Permite nomes de arquivos com espacos, multiplos pontos e caracteres estendidos
+\usepackage{grffile}
+\PassOptionsToPackage{normalem}{ulem} 
+\usepackage{ulem}
+\usepackage{multicol}
+\usepackage{courier}
+\usepackage{listings, xcolor}
+
+\lstset{
+tabsize = 4,
+showstringspaces = false, 
+numbers = left, 
+commentstyle = \color{green},
+keywordstyle = \color{blue},
+stringstyle = \color{green},
+rulecolor = \color{black}, 
+basicstyle = \small \ttfamily,
+breaklines = true,
+numberstyle = \tiny,
+}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf,abnt-thesis-year=both]{abntex2cite}
+\usepackage{longtable}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, positioning}
+\usepackage{array}					
+\usepackage{soul}					
+\usepackage[framemethod=default]{mdframed}	
+\usepackage{pdflscape}				
+
+% Inclui tanto a pasta fig/ quanto a pasta Telas/ e a raiz nas buscas de imagem
+\graphicspath{{fig/}{Telas/}{./}}
+
+\definecolor{marcatexto}{rgb}{1,1,0}
+\sethlcolor{marcatexto}
+\newcommand{\obs}[1]{\hl{#1}}
+
+\newmdenv[
+	linewidth=0.6pt,
+	linecolor=black,
+	backgroundcolor=white,
+	innertopmargin=8pt,
+	innerbottommargin=8pt,
+	innerleftmargin=10pt,
+	innerrightmargin=10pt,
+	skipabove=\baselineskip,
+	skipbelow=\baselineskip
+]{casodeuso}
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+\renewcommand{\backref}{}
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado nas páginas #2.%
+	\fi}%
+
+\titulo{Documentação do Software: Sistema de Gestão de Empresa Junior}
+\autor{Luan Lana Maia \\ Yuri Espindola}
+\local{Timóteo - MG}
+\data{\today}
+\orientador{Márcia}
+\instituicao{%
+  Centro Federal de Educação Tecnológica de Minas Gerais
+  \par
+  Campus Timóteo
+  \par
+  Graduação em Engenharia de Computação
+}
+\tipotrabalho{Documentação de Software}
+
+\preambulo{Documento apresentado à disciplina de Laboratório de Modelagem de Sistemas do Campus Timóteo do Centro Federal de Educação Tecnológica de Minas Gerais.}
+
+\makeatletter
+\hypersetup{
+		pdftitle={\@title},
+		pdfauthor={\@author},
+    	pdfsubject={},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico},
+		colorlinks=true,
+    	linkcolor=black,
+    	citecolor=black,
+    	filecolor=black,
+		urlcolor=black,
+		bookmarksdepth=4
+}
+\makeatother
+
+\setlength{\parindent}{1.3cm}
+\setlength{\parskip}{0.2cm}
+
+\makeindex
+
+\begin{document}
+\frenchspacing
+
+\pretextual
+\imprimircapa
+
+\renewcommand*{\insertchapterspace}{} 
+ 
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+\textual
+\input{01-glossario.tex}
+\input{02-repositorios.tex}
+\input{03-materiais-referencia.tex}
+\input{04-minimundo.tex}
+\input{05-requisitos.tex}
+\input{06-projeto-interacao.tex}
+\input{07-diagrama-classes.tex}
+%\input{08-arquitetura.tex}
+%\input{09-projeto-dados.tex}
+
+\bookmarksetup{startatroot}
+
+\postextual
+
+\nocite{bezerra2015}
+\bibliography{bibfile}
+
+\end{document}

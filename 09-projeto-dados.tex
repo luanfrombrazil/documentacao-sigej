@@ -1,0 +1,141 @@
+% ----------------------------------------------------------
+% 9. Projeto de Dados
+% ----------------------------------------------------------
+\chapter{Projeto de Dados}
+\label{cap:projeto-dados}
+
+% ----------------------------------------------------------
+\section{Modelo de dados do projeto}
+% ----------------------------------------------------------
+
+\obs{Colocar aqui o diagrama que representa o modelo de dados do projeto: o DER do seu
+projeto (DER: Diagrama Entidade Relacionamento), ou o esquema de dados NOSQL etc. Ele
+pode ser elaborado em ferramentas de modelagem UML ou gerados pelo ambiente de
+desenvolvimento. (Deve existir em todos os projetos que envolvem banco de dados). O
+exemplo abaixo é de um DER para vocês lembrarem como é.}
+
+\begin{figure}[htb]
+	\centering
+	\caption[Exemplo de DER]{Exemplo de DER}
+	\label{fig:exemplo-der}
+	\includegraphics[width=\textwidth]{exemplo-der}
+\end{figure}
+
+% ----------------------------------------------------------
+\section{Dicionário de Dados Completo}
+% ----------------------------------------------------------
+
+\obs{Faça um dicionário completo. O exemplo abaixo é para vocês lembrarem como é.}
+
+% ---
+% O documento original pede que as páginas do dicionário de dados fiquem em PAISAGEM.
+% Isso é feito aqui pelo ambiente landscape (pacote pdflscape).
+% ---
+\begin{landscape}
+
+\footnotesize
+
+\noindent
+\begin{tabular}{|p{4.0cm}|p{12.0cm}|p{5.0cm}|}
+\hline
+\textbf{ENTIDADE} & & \\
+\hline
+\textbf{Nome:} & \multicolumn{2}{p{17.4cm}|}{Tabela de Curso} \\
+\hline
+\textbf{Nome Abreviado:} & \multicolumn{2}{p{17.4cm}|}{TBCURSO} \\
+\hline
+\textbf{Índices:} & \textbf{Nome do Índice} & \textbf{Atributos} \\
+\hline
+ & IND\_TBCURSO\_NMCURSO & NMCURSO \\
+\hline
+\textbf{Descrição:} & \multicolumn{2}{p{17.4cm}|}{Tabela que contém todos os cursos
+oferecidos pela Universidade Miranda} \\
+\hline
+\end{tabular}
+
+\vspace{0.4cm}
+
+\noindent\textbf{Atributos:}
+
+\noindent
+\begin{tabular}{|p{3.6cm}|c|c|p{7.0cm}|p{2.8cm}|p{3.0cm}|}
+\hline
+\textbf{Nome do Atributo} & \textbf{Tipo} & \textbf{Tamanho} & \textbf{Descrição} &
+\textbf{Máscara} & \textbf{Regra Validação} \\
+\hline
+\textbf{\underline{CDCURSO}} & N & 5,0 & Código do Curso & 99.999 & >0 \\
+\hline
+NMCURSO & T & 50 & Nome do Curso & & Obrigatório \\
+\hline
+CDAREA & N & 5,0 & Código da Área & 99.999 & >0 \\
+\hline
+DTINCREG & D & 10 & Data Inclusão Registro & 99/99/9999 & < = date ( ) \\
+\hline
+CDUSUINC & N & 5,0 & Código Usuário Incluiu Registro & 99.999 & >0 \\
+\hline
+DTALTREC & D & 8 & Data Alteração do Registro & 99/99/9999 & < = date ( ) \\
+\hline
+CDUSUALT & N & 5,0 & Código Usuário Alterou Registro & 99.999 & >0 \\
+\hline
+\end{tabular}
+
+\vspace{1.0cm}
+
+\noindent
+\begin{tabular}{|p{4.0cm}|p{12.0cm}|p{5.0cm}|}
+\hline
+\textbf{ENTIDADE} & & \\
+\hline
+\textbf{Nome:} & \multicolumn{2}{p{17.4cm}|}{Cadastro de Aluno} \\
+\hline
+\textbf{Nome Abreviado:} & \multicolumn{2}{p{17.4cm}|}{TBALUNO} \\
+\hline
+\textbf{Índices:} & \textbf{Nome do Índice} & \textbf{Atributos} \\
+\hline
+ & IND\_TBALUNO\_NMALUNO & NMALUNO \\
+\hline
+ & IND\_TBALUNO\_CPF & CPF \\
+\hline
+\textbf{Descrição:} & \multicolumn{2}{p{17.4cm}|}{Tabela que contém todos os alunos
+matriculados na Universidade Miranda} \\
+\hline
+\end{tabular}
+
+\vspace{0.4cm}
+
+\noindent\textbf{Atributos:}
+
+\noindent
+\begin{tabular}{|p{3.6cm}|c|c|p{7.0cm}|p{2.8cm}|p{3.0cm}|}
+\hline
+\textbf{Nome do Atributo} & \textbf{Tipo} & \textbf{Tamanho} & \textbf{Descrição} &
+\textbf{Máscara} & \textbf{Regra Validação} \\
+\hline
+\textbf{\underline{CDALUNO}} & N & 5,0 & Código do Aluno & 99.999 & >0 \\
+\hline
+NMALUNO & T & 50 & Nome do Aluno & & Obrigatório \\
+\hline
+SEXO & T & 1 & Sexo & & \\
+\hline
+CDCURSO & N & 5,0 & Código do Curso & 99.999 & >0 \\
+\hline
+CDCIDADENASC & N & 5,0 & Código Cidade Nascimento & 99.999 & >0 \\
+\hline
+CDCIDADERES & N & 5,0 & Código Cidade Residência & 99.999 & >0 \\
+\hline
+EDFONE & T & 10 & Telefone & (99)9999-9999 & \\
+\hline
+CPF & N & 11 & CPF do Aluno & 999.999.999-99 & obrigatório \\
+\hline
+DTINCREG & D & 8 & Data Inclusão Registro & 99/99/9999 & < = date ( ) \\
+\hline
+CDUSUINC & N & 5,0 & Código Usuário Incluiu Registro & 99.999 & >0 \\
+\hline
+DTALTREC & D & 8 & Data Alteração do Registro & 99/99/9999 & < = date ( ) \\
+\hline
+CDUSUALT & N & 5,0 & Código Usuário Alterou Registro & 99.999 & >0 \\
+\hline
+\end{tabular}
+
+\normalsize
+\end{landscape}
