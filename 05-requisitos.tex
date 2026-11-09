@@ -5,13 +5,15 @@
 \label{cap:requisitos}
 
 \section{Descrição do sistema e Motivação}
-Será modelado e implementado um sistema Web para a gestão centralizada de membros, cômputo automatizado de horas de extensão, acompanhamento disciplinar e organização interna da Commit Júnior. A aplicação integrará cadastro de membros, cálculo de tempo de permanência, envio de relatórios aos coordenadores de curso via e-mail, controle de advertências com prazos de validade automáticos, diretório corporativo com filtros de equipe e calendário de reuniões.
+Será modelado e implementado um sistema Web, o Sistema Integrado de Gestão de Empresa Júnior (SIGEJ), para a gestão centralizada da Commit Júnior. A aplicação integrará cadastro de membros e termos jurídicos, cálculo de tempo de casa e de horas de extensão com envio dos relatórios ao professor orientador, controle de ocorrências disciplinares com prazos de validade automáticos, diretório corporativo, quadro de avisos, calendário de reuniões, acompanhamento de projetos e tarefas, funil comercial, lançamentos financeiros e processo de governança (propostas e votações da diretoria).
 
-A motivação para o uso do software fundamenta-se na superação das fragilidades decorrentes do uso disperso de planilhas do Google Sheets e páginas do Notion. A solução proposta assegura integridade relacional, rastreabilidade via trilhas de auditoria, proteção de dados civis sensíveis e eliminação de tarefas operacionais manuais das lideranças da empresa júnior.
+A motivação para o uso do software fundamenta-se na superação das fragilidades decorrentes do uso disperso de planilhas do Google Sheets, páginas do Notion e mensagens de WhatsApp. A solução proposta assegura integridade relacional, rastreabilidade via trilhas de auditoria, proteção de dados civis sensíveis e eliminação de tarefas operacionais manuais das lideranças da empresa júnior.
 
 \section{Requisitos funcionais}
 
 \subsection{Descrição dos atores}
+
+Os atores seguem a hierarquia de generalização do DCU (Figura~\ref{fig:dcu-commit}): Gerente e Diretor são especializações de Membro e herdam todas as suas funcionalidades; Diretor de G\&G e Diretor Financeiro são especializações de Diretor.
 
 \begin{center}
 \footnotesize
@@ -25,67 +27,109 @@ A motivação para o uso do software fundamenta-se na superação das fragilidad
 \hline
 \endhead
 
-1 & Administrador & Responsável por parametrizar taxas de horas, cadastrar membros e gerenciar ocorrências disciplinares e relatórios acadêmicos. & Diária & Alta \\
+1 & Membro (Assessor / Consultor) & Integrante da empresa júnior que consulta seu perfil, o diretório da equipe, o quadro de avisos e seus projetos e tarefas, gerencia seus compromissos no calendário e contesta ocorrências disciplinares recebidas. & Diária & Alta \\
 \hline
 
-2 & Setor Jurídico & Responsável pela auditoria e validação de termos contratuais de voluntariado, desligamento e certificados de participação. & Semanal & Alta \\
+2 & Gerente & Membro que lidera uma gerência ou squad; registra ocorrências disciplinares, gerencia o funil comercial e os projetos e tarefas de sua equipe. & Diária & Alta \\
 \hline
 
-3 & Líder de Área (Diretor / Gerente) & Responsável por acompanhar sua diretoria ou squad, registrar ocorrências de pontuação e publicar avisos setoriais. & Diária & Alta \\
+3 & Diretor & Membro que lidera uma diretoria; além das atividades do Gerente, propõe e vota mudanças de governança. & Diária & Alta \\
 \hline
 
-4 & Membro (Assessor / Consultor) & Membro que acessa o diretório de contatos, verifica seu saldo de horas e advertências, submete contestações e agenda compromissos. & Diária & Alta \\
+4 & Diretor de G\&G & Diretor responsável pela gestão de pessoas e pela parte jurídica; gerencia cadastro de membros, termos, avisos, contestações e todo o processo de horas de extensão. & Diária & Alta \\
+\hline
+
+5 & Diretor Financeiro & Diretor responsável pelas finanças; gerencia os lançamentos financeiros e aprova reembolsos. & Semanal & Alta \\
+\hline
+
+6 & Professor orientador & Ator externo (docente do CEFET-MG) que recebe os demonstrativos de horas e realiza o lançamento no SIGAA. & Eventual & Média \\
+\hline
+
+7 & Autentique & Ator secundário (sistema externo) de assinatura eletrônica dos termos de voluntariado, desligamento e certificados. & Sob demanda & Não se aplica \\
+\hline
+
+8 & GitHub & Ator secundário (sistema externo) de onde são obtidas as informações de repositórios vinculadas aos projetos e tarefas. & Sob demanda & Não se aplica \\
 \hline
 \end{longtable}
 \end{center}
 
 \subsection{Lista de funcionalidades}
 
-Foi identificada a seguinte lista de funções para este produto:
+Foi identificada a seguinte lista de funções para este produto, na mesma ordem e com os mesmos nomes dos casos de uso do DCU:
 
 \begin{center}
 \footnotesize
-\begin{longtable}{|c|c|p{3.1cm}|p{7.5cm}|}
+\begin{longtable}{|c|c|p{2.9cm}|p{2.4cm}|p{5.3cm}|}
 \hline
-\textbf{Cod} & \textbf{Tipo} & \textbf{Nome da função} & \textbf{Descrição} \\
+\textbf{Cod} & \textbf{Tipo} & \textbf{Nome da função} & \textbf{Ator(es)} & \textbf{Descrição} \\
 \hline
 \endfirsthead
 \hline
-\textbf{Cod} & \textbf{Tipo} & \textbf{Nome da função} & \textbf{Descrição} \\
+\textbf{Cod} & \textbf{Tipo} & \textbf{Nome da função} & \textbf{Ator(es)} & \textbf{Descrição} \\
 \hline
 \endhead
 
-UC-01 & 3 & Login e Autenticação & Validação de acesso por meio de e-mail institucional e credencial criptografada, atribuindo perfil de permissão compatível. \\
+UC-01 & 3 & Autenticar-se & Membro (e especializações) & Validação de acesso por e-mail institucional e credencial criptografada, carregando o perfil de permissão compatível. \\
 \hline
 
-UC-02 & 1 & Gerenciar Cadastro de Membros & Cadastro, alteração cadastral e exclusão lógica de dados civis (CPF, RG, endereço), acadêmicos (matrícula, campus, curso) e organizacionais (cargo, diretoria, área, GitHub). \\
+UC-02 & 2 & Consultar meu perfil & Membro & Exibição dos dados cadastrais, cargo, tempo de casa, saldo de horas de extensão e pontuações ativas do próprio membro. \\
 \hline
 
-UC-03 & 1 & Gerenciar Documentação e Termos & Acompanhamento de conformidade de assinatura dos Termos de Voluntariado, Termos de Desligamento e Certificados de Extensão. \\
+UC-03 & 2 & Consultar diretório da equipe & Membro & Painel de membros ativos filtrados por campus, diretoria e squad, com indicadores consolidados de horas e engajamento por área. \\
 \hline
 
-UC-04 & 1 & Parametrizar Regras de Horas & Configuração da carga horária de extensão conferida por período a cada cargo e função ocupada no organograma. \\
+UC-04 & 2 & Consultar quadro de avisos & Membro & Consulta de avisos direcionados a toda a instituição ou restritos à diretoria do membro. \\
 \hline
 
-UC-05 & 2 & Contabilizar Horas de Extensão e Tempo de Casa & Processamento do somatório de horas de extensão com base nas datas de exercício das funções e cômputo da senioridade institucional do membro. \\
+UC-05 & 1 & Gerenciar calendário & Membro & Gestão de eventos corporativos (Reuniões Gerais e treinamentos) e agendamento de reuniões individuais (1-on-1), com verificação de choque de horário. \\
 \hline
 
-UC-06 & 4 & Notificar e Enviar Horas para a Coordenação & Agrupamento dos totais de horas aprovadas e despacho formal via correio eletrônico institucional à coordenação responsável pelo registro no SIGAA. \\
+UC-06 & 1 & Contestar ocorrência & Membro & Submissão de justificativa formal contra uma ocorrência disciplinar recebida, mantendo-a como pendente até o julgamento. \\
 \hline
 
-UC-07 & 1 & Gerenciar Pontos e Penalidades & Registro de infrações disciplinares com pontuação associada, cálculo automático de validade de expiração e incidência de agravantes de reincidência. \\
+UC-07 & 2 & Consultar projetos e tarefas & Membro & Consulta dos projetos em que o membro atua e de suas tarefas e respectivos status. \\
 \hline
 
-UC-08 & 1 & Contestar Pontuações & Submissão de justificativa formal pelo membro contra pontuações recebidas, retendo o status como pendente até julgamento da diretoria. \\
+UC-08 & 1 & Gerenciar documentos e termos & Diretor de G\&G; Autentique & Acompanhamento da conformidade de assinatura dos Termos de Voluntariado, Termos de Desligamento e Certificados, com envio para assinatura e retorno do status pelo Autentique. \\
 \hline
 
-UC-09 & 2 & Exibir Diretório de Equipe e Rankings & Painel de membros ativos filtrados por campus, diretoria e squad, com indicadores consolidados de horas e engajamento por área. \\
+UC-09 & 1 & Gerenciar cadastro de membros & Diretor de G\&G & Cadastro, alteração e desativação lógica de dados civis (CPF, RG, endereço), acadêmicos (matrícula, campus, curso) e organizacionais (cargo, diretoria, squad, GitHub). \\
 \hline
 
-UC-10 & 1 & Gerenciar Quadro de Avisos & Publicação e consulta de notas informativas direcionadas a toda a instituição ou restritas a áreas específicas. \\
+UC-10 & 1 & Publicar aviso & Diretor de G\&G & Publicação de avisos para toda a instituição ou para diretorias específicas. \\
 \hline
 
-UC-11 & 1 & Gerenciar Calendário e Agendamento & Gestão de eventos corporativos (Reuniões Gerais e treinamentos) e agendamento de reuniões individuais (1-on-1) com verificação de choque de horário. \\
+UC-11 & 1 & Julgar contestação & Diretor de G\&G & Análise das contestações pendentes, acolhendo-as (ocorrência cancelada) ou rejeitando-as (ocorrência mantida). \\
+\hline
+
+UC-12 & 1 & Parametrizar regras de horas & Diretor de G\&G & Configuração da carga horária de extensão por período para cada cargo e função do organograma. \\
+\hline
+
+UC-13 & 2 & Contabilizar horas e tempo de casa & Diretor de G\&G & Somatório das horas de extensão com base nas datas de exercício dos cargos e cômputo do tempo de casa do membro. \\
+\hline
+
+UC-14 & 4 & Enviar horas ao professor orientador & Diretor de G\&G; Professor orientador & Agrupamento das horas contabilizadas e envio formal por e-mail ao professor orientador, para lançamento no SIGAA. Inclui UC-13. \\
+\hline
+
+UC-15 & 1 & Registrar ocorrência disciplinar & Gerente; Diretor & Registro de infração com pontuação, cálculo automático da data de expiração e do agravante de reincidência. \\
+\hline
+
+UC-16 & 1 & Gerenciar funil comercial e clientes & Gerente; Diretor & Cadastro e consulta de clientes e acompanhamento das oportunidades nas etapas do funil de vendas. \\
+\hline
+
+UC-17 & 1 & Gerenciar projetos e tarefas & Gerente; Diretor; GitHub & Cadastro e acompanhamento de projetos e tarefas, com vínculo aos repositórios do GitHub. \\
+\hline
+
+UC-18 & 1 & Propor mudança de governança & Diretor & Registro de proposta de alteração de regras ou estrutura da empresa para análise da diretoria. \\
+\hline
+
+UC-19 & 1 & Votar proposta de governança & Diretor & Registro do voto do Diretor nas propostas abertas e homologação do resultado. \\
+\hline
+
+UC-20 & 1 & Gerenciar lançamentos financeiros & Diretor Financeiro & Registro e consulta de entradas e saídas financeiras da empresa. \\
+\hline
+
+UC-21 & 1 & Aprovar reembolso & Diretor Financeiro & Análise e aprovação (ou rejeição) de solicitações de reembolso. \\
 \hline
 \end{longtable}
 \end{center}
@@ -114,114 +158,25 @@ Link para o DCU: \url{https://drive.google.com/file/d/1It3V4zqqA9LMgIkKsWDLE538F
 
 \textbf{RN01 - Unicidade Cadastral}: Todo integrante deve possuir identificação única no banco de dados referenciada por seu CPF e número de matrícula acadêmica.
 
-\textbf{RN02 - Cômputo Proporcional de Horas}: As horas de extensão são computadas diretamente multiplicando o intervalo de tempo de permanência no cargo pela taxa horária previamente homologada para a função.
+\textbf{RN02 - Cômputo Proporcional de Horas}: As horas de extensão são computadas multiplicando o intervalo de tempo de permanência no cargo pela taxa horária previamente parametrizada para a função.
 
 \textbf{RN03 - Preservação Histórica e Desativação Lógica}: Membros vinculados a horas, pontos, termos ou eventos institucionais não sofrem exclusão física; sua inativação deve ser efetuada via alteração para status ``Desligado'' ou ``Alumnus''.
 
-\textbf{RN04 - Visibilidade Restrita a Membros Ativos}: O diretório geral de consulta corporativa deve exibir somente os integrantes com vínculo ativo, ficando os registros históricos restritos à consulta das diretorias de Gestão de Pessoas e Jurídico.
+\textbf{RN04 - Visibilidade Restrita a Membros Ativos}: O diretório geral de consulta corporativa deve exibir somente os integrantes com vínculo ativo, ficando os registros históricos restritos à consulta do Diretor de G\&G.
 
 \textbf{RN05 - Caducidade e Agravamento de Penalidades}: Toda ocorrência disciplinar possui data de validade definida no ato de lançamento; reincidências ocorridas dentro do prazo de vigência acarretam a incidência do multiplicador agravante automático.
 
 \textbf{RN06 - Incompatibilidade de Agendamentos}: O sistema deve impedir a confirmação de reuniões individuais caso um dos participantes conste como confirmado em outro compromisso formal ou Reunião Geral no mesmo horário.
 
-\subsection{Descrição dos Casos de Uso}
+\textbf{RN07 - Registro de Ocorrências}: Somente Gerentes e Diretores podem registrar ocorrências disciplinares, e o membro afetado deve ser notificado do lançamento para que possa contestá-lo.
 
-\begin{casodeuso}
-\textbf{UC-01 - Login e Autenticação}
+\textbf{RN08 - Contestação de Ocorrências}: Uma ocorrência contestada permanece com status ``Pendente'' até o julgamento pelo Diretor de G\&G, e só pode ser contestada pelo membro que a recebeu.
 
-\textbf{Sumário:} Usuário informa suas credenciais para autenticar-se na plataforma.
+\textbf{RN09 - Envio de Horas}: O envio de horas ao professor orientador só pode ser realizado para membros cujas horas tenham sido previamente contabilizadas, e as horas enviadas passam ao status ``Enviado''.
 
-\textbf{Ator Primário:} Membro, Líder de Área, Jurídico ou Administrador.
+\textbf{RN10 - Aprovação de Reembolsos}: Somente o Diretor Financeiro pode aprovar ou rejeitar solicitações de reembolso, e toda decisão deve ficar registrada com data e autor.
 
-\textbf{Pré-condições:} Usuário previamente cadastrado e com status ativo no banco de dados.
-
-\textbf{Fluxo Principal}
-
-\noindent 1. Usuário acessa o sistema web.\\
-2. Usuário fornece e-mail institucional e senha de acesso.\\
-3. Sistema valida as credenciais contra a base autenticada.\\
-4. Sistema inicia a sessão do usuário e direciona para o painel de seu perfil.
-
-\textbf{Fluxo de Exceção (1):} Credenciais Inválidas
-\begin{itemize}
-    \item a. Sistema informa divergência de credenciais e convida o usuário a repetir a tentativa.
-\end{itemize}
-
-\textbf{Pós-condições:} Usuário autenticado na aplicação com perfil e níveis de acesso carregados.
-\end{casodeuso}
-
-\begin{casodeuso}
-\textbf{UC-02 - Gerenciar Cadastro de Membros}
-
-\textbf{Sumário:} Administrador executa operações de cadastro, consulta, edição e desativação de integrantes da empresa.
-
-\textbf{Ator Primário:} Administrador / Gestão de Pessoas.
-
-\textbf{Pré-condições:} Administrador devidamente autenticado.
-
-\textbf{Fluxo Principal}
-
-\noindent 1. Administrador acessa o módulo de Gestão de Membros.\\
-2. Sistema lista os membros cadastrados com suporte a filtros por diretoria, campus e status.\\
-3. Administrador aciona o formulário de inclusão e preenche os campos: matrícula, CPF, RG, nome completo, curso, campus, endereço, e-mail institucional, GitHub, diretoria, área/squad, cargo e data de ingresso.\\
-4. Sistema valida a unicidade cadastral (conforme RN01) e persiste o novo registro.\\
-5. Para membros já existentes, o administrador pode atualizar informações ou alterar o status para ``Desligado'' ou ``Alumnus''.\\
-6. Sistema armazena as alterações mantendo a integridade histórica.
-
-\textbf{Fluxo de Exceção (1):} Violação de Unicidade Cadastral (RN01)
-\begin{itemize}
-    \item a. Sistema acusa documento já existente no banco de dados e interrompe o cadastro.
-\end{itemize}
-
-\textbf{Fluxo de Exceção (2):} Tentativa de Exclusão Física com Vínculos (RN03)
-\begin{itemize}
-    \item a. Sistema impede a exclusão física caso haja dependências em horas ou pontos e orienta a inativação lógica.
-\end{itemize}
-
-\textbf{Pós-condições:} Membro registrado ou atualizado na base corporativa.
-\end{casodeuso}
-
-\begin{casodeuso}
-\textbf{UC-06 - Notificar e Enviar Horas para a Coordenação}
-
-\textbf{Sumário:} Sistema gera o lote de horas apuradas e encaminha demonstrativo oficial por e-mail à coordenação do curso.
-
-\textbf{Ator Primário:} Administrador / Gestão de Pessoas.
-
-\textbf{Atores Secundários:} Servidor SMTP de E-mail Institucional.
-
-\textbf{Pré-condições:} Membros selecionados com horas de extensão calculadas e conferidas.
-
-\textbf{Fluxo Principal}
-
-\noindent 1. Administrador seleciona o período e solicita a apuração das horas de extensão.\\
-2. Sistema exibe a tabela com matrícula, nome, curso, campus e somatório de horas.\\
-3. Administrador confirma o encerramento do lote e solicita o disparo à coordenação.\\
-4. Sistema anexa o relatório formal e envia a notificação via e-mail ao endereço do coordenador acadêmico.\\
-5. Sistema atualiza o status das horas para ``Enviado''.
-
-\textbf{Pós-condições:} Demonstrativo de horas enviado à coordenação acadêmica para validação no SIGAA.
-\end{casodeuso}
-
-\begin{casodeuso}
-\textbf{UC-07 - Gerenciar Pontos e Penalidades}
-
-\textbf{Sumário:} Líderes registram penalidades disciplinares e acompanham o status de expiração e agravantes.
-
-\textbf{Ator Primário:} Administrador / Gestão de Pessoas ou Líder de Área.
-
-\textbf{Pré-condições:} Usuário autenticado com perfil de liderança.
-
-\textbf{Fluxo Principal}
-
-\noindent 1. Usuário abre a tela de registro de ocorrência disciplinar.\\
-2. Usuário seleciona o membro, digita a infração, os pontos correspondentes e anexa a justificativa.\\
-3. Sistema confere o histórico e calcula automaticamente o multiplicador de reincidência e a data limite de expiração (conforme RN05).\\
-4. Usuário revisa e confirma o lançamento.\\
-5. Sistema persiste a advertência e ajusta o saldo disciplinar ativo do membro.
-
-\textbf{Pós-condições:} Ocorrência disciplinar registrada com cômputo de expiração programado.
-\end{casodeuso}
+\textbf{RN11 - Votação de Governança}: O sistema não possui conta de administrador. Alterações de perfis de acesso, nomeação ou destituição de diretores e definição das regras de horas de extensão são feitas por proposta de um Diretor, que só é aplicada ao receber a aprovação de outros 2 membros da diretoria. Cada Diretor possui um único voto por proposta.
 
 \section{Requisitos Não-Funcionais (RNF)}
 
@@ -238,7 +193,7 @@ As telas com listagens de membros, pontuações e relatórios de horas devem con
 \textbf{RNF03 - Controle de Acesso e Permissões (RBAC)}\\
 \textbf{Categoria:} Segurança\\
 \textbf{Prioridade:} Essencial\\
-O sistema deve implementar autenticação baseada em perfis de acesso, restringindo a visualização de documentos civis e dados disciplinares apenas a gestores e ao setor Jurídico.
+O sistema deve implementar autenticação baseada em perfis de acesso, restringindo a visualização de documentos civis e dados disciplinares ao Diretor de G\&G e aos Diretores e Gerentes nos limites de suas atribuições.
 
 \textbf{RNF04 - Criptografia de Dados}\\
 \textbf{Categoria:} Segurança\\
@@ -253,4 +208,9 @@ A interface gráfica de usuário deve ser responsiva, adaptando-se sem quebra de
 \textbf{RNF06 - Trilha de Auditoria (Logs)}\\
 \textbf{Categoria:} Confiabilidade\\
 \textbf{Prioridade:} Importante\\
-Todas as rotinas de manipulação, alteração de horas e homologação de penalidades devem gravar logs imutáveis contendo data, hora e identificação do autor da operação.
+Todas as rotinas de manipulação, alteração de horas, julgamento de contestações, aprovação de reembolsos e votações de governança devem gravar logs imutáveis contendo data, hora e identificação do autor da operação.
+
+\textbf{RNF07 - Integração com Serviços Externos}\\
+\textbf{Categoria:} Interoperabilidade\\
+\textbf{Prioridade:} Importante\\
+O sistema deve integrar-se ao Autentique (assinatura eletrônica), ao GitHub (vínculo de repositórios) e ao servidor SMTP institucional (envio de e-mails), tratando falhas de comunicação sem perda dos dados já registrados.
