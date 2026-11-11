@@ -36,7 +36,7 @@ Os atores seguem a hierarquia de generalização do DCU (Figura~\ref{fig:dcu-com
 3 & Diretor & Membro que lidera uma diretoria; além das atividades do Gerente, propõe e vota mudanças de governança. & Diária & Alta \\
 \hline
 
-4 & Diretor de G\&G & Diretor responsável pela gestão de pessoas e pela parte jurídica; gerencia cadastro de membros, termos, avisos, contestações e todo o processo de horas de extensão. & Diária & Alta \\
+4 & Diretor de G\&G & Diretor de Gestão \& Gente, responsável pelas áreas de Pessoas e Jurídica; gerencia cadastro de membros, termos, avisos, contestações e todo o processo de horas de extensão. & Diária & Alta \\
 \hline
 
 5 & Diretor Financeiro & Diretor responsável pelas finanças; gerencia os lançamentos financeiros e aprova reembolsos. & Semanal & Alta \\
@@ -93,7 +93,7 @@ UC-07 & 2 & Consultar projetos e tarefas & Membro & Consulta dos projetos em que
 UC-08 & 1 & Gerenciar documentos e termos & Diretor de G\&G; Autentique & Acompanhamento da conformidade de assinatura dos Termos de Voluntariado, Termos de Desligamento e Certificados, com envio para assinatura e retorno do status pelo Autentique. \\
 \hline
 
-UC-09 & 1 & Gerenciar cadastro de membros & Diretor de G\&G & Cadastro, alteração e desativação lógica de dados civis (CPF, RG, endereço), acadêmicos (matrícula, campus, curso) e organizacionais (cargo, diretoria, squad, GitHub). \\
+UC-09 & 1 & Gerenciar cadastro de membros & Diretor de G\&G & Cadastro, alteração e desativação lógica de dados civis (CPF, RG, endereço), acadêmicos (matrícula, campus, curso) e organizacionais (cargo, diretoria, squad, GitHub). A alteração de dados de um membro já cadastrado e a alteração de seu cargo são ações críticas: viram uma proposta de governança e só são aplicadas após a aprovação da diretoria (RN11). \\
 \hline
 
 UC-10 & 1 & Publicar aviso & Diretor de G\&G & Publicação de avisos para toda a instituição ou para diretorias específicas. \\
@@ -176,7 +176,7 @@ Link para o DCU: \url{https://drive.google.com/file/d/1It3V4zqqA9LMgIkKsWDLE538F
 
 \textbf{RN10 - Aprovação de Reembolsos}: Somente o Diretor Financeiro pode aprovar ou rejeitar solicitações de reembolso, e toda decisão deve ficar registrada com data e autor.
 
-\textbf{RN11 - Votação de Governança}: O sistema não possui conta de administrador. Alterações de perfis de acesso, nomeação ou destituição de diretores e definição das regras de horas de extensão são feitas por proposta de um Diretor, que só é aplicada ao receber a aprovação de outros 2 membros da diretoria. Cada Diretor possui um único voto por proposta.
+\textbf{RN11 - Votação de Governança}: O sistema não possui conta de administrador. As ações críticas (alteração de perfis de acesso, alteração de cargos, nomeação ou destituição de diretores, alteração de dados cadastrais de outros membros e definição das regras de horas de extensão) são feitas por proposta de um Diretor, que só é aplicada ao receber a aprovação de outros 2 membros da diretoria. Cada Diretor possui um único voto por proposta.
 
 \section{Requisitos Não-Funcionais (RNF)}
 

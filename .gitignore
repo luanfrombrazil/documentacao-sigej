@@ -1,3 +1,7 @@
 build/
 *.synctex.gz
 monografia.pdf
+
+# Fontes e visões auxiliares do diagrama de classes (Mermaid)
+diagramas/
+fig/classes-*.png

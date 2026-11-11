@@ -4,49 +4,88 @@
 \chapter{Diagrama de Classes}
 \label{cap:diagrama-classes}
 
-Nesta seção é apresentado o Diagrama de Classes do sistema de gestão da Commit Júnior, elaborado sob a ótica da modelagem conceitual e lógica orientada a objetos[cite: 6, 20]. O diagrama foi modelado com o objetivo de refletir fielmente as entidades, relacionamentos, atributos e operações identificados ao longo do levantamento de requisitos, mantendo total rastreabilidade com o Minimundo, o Diagrama de Casos de Uso (DCU) e os protótipos de interface desenvolvidos[cite: 6, 20].
+Nesta seção é apresentado o Diagrama de Classes do SIGEJ. O modelo foi construído a partir do Minimundo, dos casos de uso do DCU (Figura~\ref{fig:dcu-commit}) e dos campos exibidos nos protótipos de interface (Capítulo~\ref{cap:interacao}). O diagrama foi elaborado em Mermaid.
 
-\begin{figure}[!htbp]
+A Figura~\ref{fig:classes-completo} mostra o diagrama completo, com todas as classes e associações; abaixo dele estão as enumerações usadas como tipo dos atributos de situação e de categoria. Em seguida, as classes são descritas agrupadas por módulo do sistema.
+
+\begin{landscape}
+\begin{figure}[p]
     \centering
-    \caption[Diagrama de Classes do Sistema da Commit Júnior]{Diagrama de Classes do Sistema de Gestão de Membros da Commit Júnior}
-    \includegraphics[width=0.98\textwidth,keepaspectratio]{exemplo-diagrama-classes.png}
-    \label{fig:diagrama-classes}
+    \caption[Diagrama de Classes completo do SIGEJ]{Diagrama de Classes completo do SIGEJ}
+    \label{fig:classes-completo}
+    \includegraphics[width=\linewidth,height=0.82\textheight,keepaspectratio]{diagrama-classes}
 \end{figure}
+\end{landscape}
 
-\section*{Descrição das Classes e Relacionamentos}
+\section{Pessoas e acesso}
 
-Para assegurar a completude e clareza da arquitetura de dados e domínio, as principais classes do modelo são descritas a seguir[cite: 20]:
 
 \begin{itemize}
-    \item \textbf{Membro:} Classe central do domínio que encapsula as informações cadastrais civis, acadêmicas e funcionais de cada integrante (como matrícula, CPF, RG, nome completo, curso, e-mail institucional, perfil de GitHub, status no sistema e data de ingresso)[cite: 1, 2, 4]. Implementa os métodos de controle de ciclo de vida e inativação lógica requeridos pelas regras de negócio[cite: 20].
-    
-    \item \textbf{Usuario / PerfilAcesso:} Responsável pelos mecanismos de autenticação, armazenamento seguro de credenciais (hash de senha) e autorização baseada em papéis (RBAC), segregando os privilégios entre Administrador, Jurídico, Líder de Área e Membro.
-    
-    \item \textbf{Cargo / Funcao e RegraHoras:} Entidades que parametrizam a estrutura organizacional (Diretoria, Squad) e definem a taxa de horas de extensão atribuída a cada atividade desempenhada por intervalo de vigência[cite: 1, 4].
-    
-    \item \textbf{HistoricoCargo / Extensao:} Associação temporal entre o membro e as funções desempenhadas, permitindo computar com precisão o tempo de permanência na empresa e o acumulado de horas de extensão para fins acadêmicos[cite: 1].
-    
-    \item \textbf{EnvioHorasCoordenacao:} Registra o lote de horas consolidadas que é gerado e despachado formalmente via correio eletrônico institucional (protocolo SMTP) ao professor orientador da Commit Júnior para homologação e lançamento no SIGAA[cite: 1].
-    
-    \item \textbf{TermoJuridico:} Gerencia os contratos obrigatórios de voluntariado, termos de rescisão/desligamento e certificados[cite: 2]. Mantém os códigos de autenticidade, links e o estado das assinaturas digitais intermediadas pelo serviço externo[cite: 2].
-    
-    \item \textbf{OcorrenciaPontuacao e Contestacao:} Modela o controle disciplinar da empresa júnior[cite: 3]. Registra infrações, saldo de pontos, prazos calculados de expiração e incidência de agravantes de reincidência, permitindo o acoplamento de justificativas formais abertas pelos membros[cite: 3].
-    
-    \item \textbf{Aviso:} Entidade responsável pelas publicações do mural de informes, admitindo segmentação geral institucional ou restrição por diretoria específica.
-    
-    \item \textbf{Compromisso / Evento:} Modela os compromissos corporativos plenários (Reuniões Gerais, imersões) e as reuniões individuais bilaterais (1-on-1), com validação de choques de horário entre os participantes.
+    \item \textbf{Membro:} classe central do domínio, com os dados civis, acadêmicos e organizacionais do integrante. Calcula o tempo de casa, o saldo disciplinar e as horas acumuladas exibidos em Meu Perfil e no Diretório. O endereço é uma parte do membro (composição com \textbf{Endereco}).
+    \item \textbf{Conta:} credenciais de acesso do membro, com login e senha protegida por hash ou autenticação pelo Google.
+    \item \textbf{PerfilAcesso:} conjunto de permissões (enumeração \textbf{Permissao}) que define o que cada membro pode fazer. Não existe perfil de administrador: alterar o perfil, o cargo ou os dados cadastrais de um membro só ocorre por proposta de governança homologada pela diretoria.
+    \item \textbf{Diretoria}, \textbf{Squad} e \textbf{Cargo:} estrutura organizacional. Cada cargo pertence a uma diretoria e possui um nível hierárquico (Presidente, Diretor, Gerente, Assessor ou Trainee).
+    \item \textbf{HistoricoCargo:} registra cada período em que o membro exerceu um cargo. É a base do cálculo de horas de extensão e do tempo de casa.
+    \item \textbf{Desligamento:} motivo, data e observações do desligamento lógico do membro.
 \end{itemize}
 
-\section*{Integração com Sistemas Externos}
+\section{Horas de extensão e documentos}
 
-Conforme especificado no Minimundo e nas regras de negócio, determinados dados e eventos interagem com plataformas e atores externos[cite: 20]:
 
 \begin{itemize}
-    \item \textbf{Autentique (Serviço de Assinatura Eletrônica):} Plataforma externa responsável pelo fluxo de coleta de assinaturas digitais nos termos contratuais e certificados[cite: 2]. O sistema armazena apenas a referência do documento, código de autenticação e status de retorno[cite: 2].
-    
-    \item \textbf{Servidor SMTP Institucional:} Subsistema de mensageria responsável pela entrega dos relatórios formais de extensão e comunicados de desligamento por e-mail[cite: 6].
-    
-    \item \textbf{SIGAA (CEFET-MG):} Sistema acadêmico institucional para o qual as horas de extensão aprovadas são transcritas pelo professor orientador da Commit Júnior[cite: 1]. O sistema proposto não realiza inserções diretas no banco de dados do SIGAA, atuando na geração dos demonstrativos auditáveis que subsidiam esse lançamento externo[cite: 1].
+    \item \textbf{SemestreExtensao:} período de apuração das horas, com as regras gerais do semestre (mínimo de dias em exercício, teto de horas por membro e critério para acúmulo de funções).
+    \item \textbf{RegraHoras:} quantidade de horas que cada cargo confere em um semestre.
+    \item \textbf{LoteEnvioHoras} e \textbf{ItemEnvioHoras:} lote de horas contabilizadas de um semestre e as horas de cada membro, enviados por e-mail ao professor orientador para lançamento no SIGAA.
+    \item \textbf{TermoJuridico} e \textbf{ModeloDocumento:} termos de voluntariado, de desligamento e certificados de cada membro, gerados a partir de um modelo versionado e enviados para assinatura no Autentique.
+\end{itemize}
+
+\section{Controle disciplinar}
+
+
+\begin{itemize}
+    \item \textbf{Infracao:} catálogo de infrações com gravidade e pontuação de referência.
+    \item \textbf{Ocorrencia:} infração registrada para um membro por um Gerente ou Diretor. Calcula o multiplicador de reincidência, os pontos aplicados, a data de expiração e o prazo de contestação.
+    \item \textbf{Contestacao:} justificativa enviada pelo membro que recebeu a ocorrência e a decisão de quem a julgou. Uma ocorrência tem no máximo uma contestação.
+\end{itemize}
+
+\section{Comunicação e agenda}
+
+
+\begin{itemize}
+    \item \textbf{Aviso:} publicação do quadro de avisos, para toda a empresa (sem diretoria destinatária) ou para diretorias específicas, com agendamento, prazo de exibição e confirmação de leitura.
+    \item \textbf{Evento:} reuniões, treinamentos, eventos e reuniões individuais (1-on-1) do calendário, com verificação de choque de horário entre os participantes.
+    \item \textbf{Participacao:} participação de um membro em um evento, com a confirmação e a presença usada no registro de faltas.
+\end{itemize}
+
+\section{Projetos, comercial e financeiro}
+
+
+\begin{itemize}
+    \item \textbf{Projeto}, \textbf{Sprint} e \textbf{Tarefa:} projetos dos clientes, organizados em sprints e tarefas com responsável, prazo e horas previstas. Ao concluir uma tarefa, as horas previstas são creditadas ao responsável.
+    \item \textbf{Oportunidade:} contato acompanhado nas etapas do funil de vendas, desde \textit{suspect} até o fechamento.
+    \item \textbf{Cliente}, \textbf{PropostaComercial}, \textbf{Contrato} e \textbf{Parcela:} cadastro de clientes, propostas versionadas, contrato assinado e suas parcelas.
+    \item \textbf{LancamentoFinanceiro:} entradas e saídas de caixa, que podem quitar uma parcela e debitar o orçamento de uma diretoria.
+    \item \textbf{Reembolso:} solicitação de reembolso de um membro, aprovada ou recusada pelo Diretor Financeiro; quando aprovada, gera um lançamento de saída.
+\end{itemize}
+
+\section{Governança e auditoria}
+
+
+\begin{itemize}
+    \item \textbf{PropostaGovernanca:} mudança proposta por um Diretor (alterar perfil, cargo ou cadastro, nomear ou destituir diretor, definir regras de horas), com justificativa, prazo de votação e membros afetados. É homologada com 2 aprovações e arquivada com 2 rejeições; ao ser homologada, a mudança é aplicada.
+    \item \textbf{Voto:} voto de um diretor em uma proposta, com decisão e comentário. Cada diretor vota uma única vez por proposta.
+    \item \textbf{RegistroAuditoria:} trilha imutável das ações sensíveis, com data, autor e registro afetado.
+\end{itemize}
+
+\section*{Dados mantidos por sistemas externos}
+
+Alguns dados que aparecem nos protótipos não são armazenados pelo SIGEJ e, por isso, não constam no diagrama:
+
+\begin{itemize}
+    \item \textbf{GitHub:} commits, branches, pull requests e páginas de documentação exibidos na tela do projeto são lidos do repositório indicado em \texttt{Projeto.repositorioGitHub}. O SIGEJ guarda só o endereço do repositório e o usuário do GitHub de cada membro.
+    \item \textbf{Autentique:} o documento assinado e o andamento das assinaturas ficam no Autentique. O SIGEJ guarda só o identificador do documento, o código de autenticidade e o status (\texttt{TermoJuridico}).
+    \item \textbf{Servidor SMTP institucional:} envia os e-mails ao professor orientador e as notificações aos membros. O SIGEJ guarda o texto e a situação de cada lote enviado (\texttt{LoteEnvioHoras}).
+    \item \textbf{SIGAA (CEFET-MG):} o lançamento das horas é feito pelo professor orientador no SIGAA. O SIGEJ não acessa esse sistema; apenas registra no lote quando as horas foram registradas.
 \end{itemize}
 
 \clearpage
