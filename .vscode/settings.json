@@ -1,9 +1,19 @@
 {
   "latex-workshop.latex.recipes": [
-    { "name": "latexmk", "tools": ["latexmk"] }
+    { "name": "latexmk (Docker)", "tools": ["latexmk-docker"] }
   ],
   "latex-workshop.latex.tools": [
-    { "name": "latexmk", "command": "latexmk", "args": ["%DOC%"] }
+    {
+      "name": "latexmk-docker",
+      "command": "docker",
+      "args": [
+        "run", "--rm",
+        "-v", "%DIR%:/workdir",
+        "-w", "/workdir",
+        "texlive/texlive:TL2025-historic",
+        "latexmk", "%DOCFILE%"
+      ]
+    }
   ],
   "latex-workshop.latex.rootFile.useSubFile": false,
   "latex-workshop.latex.autoBuild.run": "onSave",
