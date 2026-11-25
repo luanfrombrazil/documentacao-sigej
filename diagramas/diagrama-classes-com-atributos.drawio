@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram id="d1" name="SIGEJ — Diagrama de classes (com atributos)">
-    <mxGraphModel dx="982" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2894" pageHeight="4066" background="#FFFFFF" math="0" shadow="0">
+    <mxGraphModel dx="1414" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2894" pageHeight="4066" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -362,7 +362,7 @@
           <mxGeometry height="19.2" width="157" y="208.8" as="geometry" />
         </mxCell>
         <mxCell id="c_Participacao" parent="1" style="swimlane;fontStyle=1;fontColor=#222222;align=center;verticalAlign=top;spacingTop=4;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=14;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#222222;" value="Participacao" vertex="1">
-          <mxGeometry height="80" width="132" x="1750" y="2400" as="geometry" />
+          <mxGeometry height="80" width="132" x="1690" y="2356.5" as="geometry" />
         </mxCell>
         <mxCell id="c_Participacao_a0" parent="c_Participacao" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontColor=#222222;" value="confirmado" vertex="1">
           <mxGeometry height="24" width="132" y="32" as="geometry" />
