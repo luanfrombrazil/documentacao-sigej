@@ -154,31 +154,31 @@
 \section{DCU}
 \begin{frame}[plain]
   \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{diagrama.png}
+  \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{diagrama.png}
 \end{frame}
 
 \section{DCUMembro}
 \begin{frame}[plain]
   \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{1.png}
+  \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{1.png}
 \end{frame}
 
 \section{DCUGerenteDiretor}
 \begin{frame}[plain]
   \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{2.png}
+  \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{2.png}
 \end{frame}
 
 \section{DCUComercialFinanceiro}
 \begin{frame}[plain]
   \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{3.png}
+  \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{3.png}
 \end{frame}
 
 \section{DCUGeG}
 \begin{frame}[plain]
   \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{4.png}
+  \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{4.png}
 \end{frame}
 
 
@@ -223,6 +223,73 @@
   \end{tabular}
 \end{frame}
 
+
+% ==========================================================
+\section{Diagrama de Classes}
+\begin{frame}{Diagrama de Classes: visão geral}
+  \begin{columns}[c]
+    \begin{column}{.52\textwidth}
+      \centering
+      \fbox{\includegraphics[height=6.1cm,keepaspectratio]{diagrama-classes-}}
+    \end{column}
+    \begin{column}{.44\textwidth}
+      \small
+      Organizado em \textbf{módulos}:
+      \begin{enumerate}\scriptsize\setlength{\itemsep}{2pt}
+        \item Sistema
+        \item Avisos e Governança
+        \item Controle disciplinar e documentos
+        \item Agenda
+        \item Projetos
+        \item Comercial
+        \item Financeiro
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ---------- Diagrama de Classes: partes (zoom) ----------
+\begin{frame}{Divisões do Diagrama de Classe}
+  \centering
+  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{diagramas/diagrama-dividido-colorido.png}
+\end{frame}
+
+\begin{frame}{Sistema}
+  \centering
+  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{diagramas/sistema.png}
+\end{frame}
+
+\begin{frame}{Avisos e Governança}
+  \centering
+  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{diagramas/diretoria.png}
+\end{frame}
+
+\begin{frame}{Jurídico e Gente}
+  \centering
+  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{diagramas/gestao-juridico.png}
+\end{frame}
+
+\begin{frame}{Agenda}
+  \centering
+  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{diagramas/eventos.png}
+\end{frame}
+
+\begin{frame}{Projetos}
+  \centering
+  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{diagramas/projetos.png}
+\end{frame}
+
+\begin{frame}{Comercial}
+  \centering
+  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{diagramas/comercial.png}
+\end{frame}
+
+\begin{frame}{Financeiro}
+  \centering
+  \includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{diagramas/financeiro.png}
+\end{frame}
+
+
 % ==========================================================
 \section{Projeto de Interface e Interação}
 \begin{frame}{Projeto de Interface e Interação}
@@ -251,7 +318,7 @@
 
 \begin{frame}[plain]
  \centering\scriptsize\textbf{Login}\\[2pt]
-      \fbox{\includegraphics[width=\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax]{login.png}}
+      \fbox{\includegraphics[width=\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax,height=0.88\paperheight,keepaspectratio]{login.png}}
 \end{frame}
 
 % ---------- antes x depois ----------
@@ -304,90 +371,35 @@
 
 \begin{frame}[plain]
  \centering\scriptsize\textbf{Propostas e Contratos}\\[2pt]
-      \fbox{\includegraphics[width=\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax]{comercial-propostas-contratos.png}}
+      \fbox{\includegraphics[width=\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax,height=0.88\paperheight,keepaspectratio]{comercial-propostas-contratos.png}}
 \end{frame}
+
+\antesdepois{Interface: comercial}
+  {ploomes}{CMR atual no Ploomes}
+  {comercial-funil-vendas}{Funil de Vendas}
+  {Listagem em tabela sem visualização em Kanban.}
+  {Listagem, visualização em Kanban, estimativa de faturamento.}
+
+\antesdepois{Interface: comercial}
+  {notion_crm}{CMR atual no Notion}
+  {comercial-funil-vendas}{Funil de Vendas}
+  {Visualização em Kanban no Notion.}
+  {Listagem, visualização em Kanban + estimativa de faturamento.}
 
 \begin{frame}[plain]
  \centering\scriptsize\textbf{Funil de Vendas}\\[2pt]
-      \fbox{\includegraphics[width=\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax]{comercial-funil-vendas.png}}
+      \fbox{\includegraphics[width=\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax,height=0.88\paperheight,keepaspectratio]{comercial-propostas-contratos.png}}
 \end{frame}
 
 \begin{frame}[plain]
  \centering\scriptsize\textbf{Projetos}\\[2pt]
-      \fbox{\includegraphics[width=\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax]{projetos-visao-membro.png}}
+      \fbox{\includegraphics[width=\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax,height=0.88\paperheight,keepaspectratio]{projetos-visao-membro.png}}
 \end{frame}
 
 \begin{frame}[plain]
  \centering\scriptsize\textbf{Homologar proposta}\\[2pt]
-      \fbox{\includegraphics[width=\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax]{governanca-homologar-proposta}}
+      \fbox{\includegraphics[width=\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax,height=0.88\paperheight,keepaspectratio]{governanca-homologar-proposta}}
 \end{frame}
-
-% ==========================================================
-\section{Diagrama de Classes}
-\begin{frame}{Diagrama de Classes: visão geral}
-  \begin{columns}[c]
-    \begin{column}{.52\textwidth}
-      \centering
-      \fbox{\includegraphics[height=6.1cm,keepaspectratio]{diagrama-classes-}}
-    \end{column}
-    \begin{column}{.44\textwidth}
-      \small
-      Organizado em \textbf{módulos}:
-      \begin{enumerate}\scriptsize\setlength{\itemsep}{2pt}
-        \item Sistema
-        \item Horas de extensão e diretorias
-        \item Controle disciplinar e documentos
-        \item Comunicação e agenda
-        \item Projetos
-        \item Comercial
-        \item Financeiro
-        \item Governança
-      \end{enumerate}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-% ---------- Diagrama de Classes: partes (zoom) ----------
-\begin{frame}[plain]
-  \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{DC-Parte-1.png}
-\end{frame}
-
-\begin{frame}[plain]
-  \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{DC-Parte-2.png}
-\end{frame}
-
-\begin{frame}[plain]
-  \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{DC-Parte-3.png}
-\end{frame}
-
-\begin{frame}[plain]
-  \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{DC-Parte-4.png}
-\end{frame}
-
-\begin{frame}[plain]
-  \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{DC-Parte-5.png}
-\end{frame}
-
-\begin{frame}[plain]
-  \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{DC-Parte-6.png}
-\end{frame}
-
-\begin{frame}[plain]
-  \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{DC-Parte-7.png}
-\end{frame}
-
-\begin{frame}[plain]
-  \centering
-  \includegraphics[height=\paperheight,keepaspectratio]{DC-Parte-8.png}
-\end{frame}
-
 
 % ==========================================================
 \begin{frame}{Perguntas e considerações}
@@ -405,5 +417,8 @@
     \end{column}
   \end{columns}
 \end{frame}
+
+
+
 
 \end{document}
