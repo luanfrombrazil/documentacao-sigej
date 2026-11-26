@@ -2,4 +2,3 @@ build/
 *.synctex.gz
 *.pdf
 # Fontes e visões auxiliares do diagrama de classes (Mermaid)
-slide.pdf
