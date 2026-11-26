@@ -5,7 +5,7 @@
 \label{cap:requisitos}
 
 \section{Descrição do sistema e Motivação}
-Será modelado e implementado um sistema Web, o Sistema Integrado de Gestão de Empresa Júnior (SIGEJ), para a gestão centralizada da Commit Júnior. A aplicação integrará cadastro de membros e termos jurídicos, cálculo de tempo de casa e de horas de extensão com envio dos relatórios ao professor orientador, controle de ocorrências disciplinares com prazos de validade automáticos, diretório corporativo, quadro de avisos, calendário de reuniões, acompanhamento de projetos e tarefas, funil comercial, lançamentos financeiros e processo de governança (propostas e votações da diretoria).
+Será modelado e implementado um sistema Web, o Sistema Integrado de Gestão de Empresa Júnior (SIGEJ), para a gestão centralizada da Commit Júnior. A aplicação integrará cadastro de membros e termos jurídicos, cálculo de tempo de empresa e de horas de extensão com envio dos relatórios ao professor orientador, controle de ocorrências disciplinares com prazos de validade automáticos, diretório corporativo, quadro de avisos, calendário de reuniões, acompanhamento de projetos e tarefas, funil comercial, lançamentos financeiros e processo de governança (propostas e votações da diretoria).
 
 A motivação para o uso do software fundamenta-se na superação das fragilidades decorrentes do uso disperso de planilhas do Google Sheets, páginas do Notion e mensagens de WhatsApp. A solução proposta assegura integridade relacional, rastreabilidade via trilhas de auditoria, proteção de dados civis sensíveis e eliminação de tarefas operacionais manuais das lideranças da empresa júnior.
 
@@ -13,7 +13,7 @@ A motivação para o uso do software fundamenta-se na superação das fragilidad
 
 \subsection{Descrição dos atores}
 
-Os atores seguem a hierarquia de generalização do DCU (Figura~\ref{fig:dcu-commit}): Gerente e Diretor são especializações de Membro e herdam todas as suas funcionalidades; Diretor de G\&G e Diretor Financeiro são especializações de Diretor.
+Os atores seguem a hierarquia de generalização do DCU (Figura~\ref{fig:dcu-commit}): Gerente é especialização de Membro; Diretor é especialização de Gerente; Diretor de G\&G, Diretor Financeiro e Diretor Comercial são especializações de Diretor.
 
 \begin{center}
 \footnotesize
@@ -30,25 +30,28 @@ Os atores seguem a hierarquia de generalização do DCU (Figura~\ref{fig:dcu-com
 1 & Membro (Assessor / Consultor) & Integrante da empresa júnior que consulta seu perfil, o diretório da equipe, o quadro de avisos e seus projetos e tarefas, gerencia seus compromissos no calendário e contesta ocorrências disciplinares recebidas. & Diária & Alta \\
 \hline
 
-2 & Gerente & Membro que lidera uma gerência ou squad; registra ocorrências disciplinares, gerencia o funil comercial e os projetos e tarefas de sua equipe. & Diária & Alta \\
+2 & Gerente & Membro que lidera uma gerência ou squad; registra ocorrências disciplinares e gerencia os projetos e tarefas de sua equipe. & Diária & Alta \\
 \hline
 
-3 & Diretor & Membro que lidera uma diretoria; além das atividades do Gerente, propõe e vota mudanças de governança. & Diária & Alta \\
+3 & Diretor & Gerente que lidera uma diretoria; além das atividades do Gerente, gerencia os squads e propõe e vota mudanças de governança. & Diária & Alta \\
 \hline
 
 4 & Diretor de G\&G & Diretor de Gestão \& Gente, responsável pelas áreas de Pessoas e Jurídica; gerencia cadastro de membros, termos, avisos, contestações e todo o processo de horas de extensão. & Diária & Alta \\
 \hline
 
-5 & Diretor Financeiro & Diretor responsável pelas finanças; gerencia os lançamentos financeiros e aprova reembolsos. & Semanal & Alta \\
+5 & Diretor Financeiro & Diretor responsável pelas finanças; gerencia os lançamentos financeiros e o orçamento das diretorias e aprova reembolsos. & Semanal & Alta \\
 \hline
 
-6 & Professor orientador & Ator externo (docente do CEFET-MG) que recebe os demonstrativos de horas e realiza o lançamento no SIGAA. & Eventual & Média \\
+6 & Diretor Comercial & Diretor responsável pelo Comercial; gerencia o funil comercial, os clientes e as propostas e contratos. & Diária & Alta \\
 \hline
 
-7 & Autentique & Ator secundário (sistema externo) de assinatura eletrônica dos termos de voluntariado, desligamento e certificados. & Sob demanda & Não se aplica \\
+7 & Professor orientador & Ator externo (docente do CEFET-MG) que recebe os demonstrativos de horas e realiza o lançamento no SIGAA. & Eventual & Média \\
 \hline
 
-8 & GitHub & Ator secundário (sistema externo) de onde são obtidas as informações de repositórios vinculadas aos projetos e tarefas. & Sob demanda & Não se aplica \\
+8 & Autentique & Ator secundário (sistema externo) de assinatura eletrônica dos termos de voluntariado, desligamento e certificados. & Sob demanda & Não se aplica \\
+\hline
+
+9 & GitHub & Ator secundário (sistema externo) de onde são obtidas as informações de repositórios vinculadas aos projetos e tarefas. & Sob demanda & Não se aplica \\
 \hline
 \end{longtable}
 \end{center}
@@ -72,7 +75,7 @@ Foi identificada a seguinte lista de funções para este produto, na mesma ordem
 UC-01 & 3 & Autenticar-se & Membro (e especializações) & Validação de acesso por e-mail institucional e credencial criptografada, carregando o perfil de permissão compatível. \\
 \hline
 
-UC-02 & 2 & Consultar meu perfil & Membro & Exibição dos dados cadastrais, cargo, tempo de casa, saldo de horas de extensão e pontuações ativas do próprio membro. \\
+UC-02 & 2 & Consultar meu perfil & Membro & Exibição dos dados cadastrais, cargo, tempo de empresa, saldo de horas de extensão e pontuações ativas do próprio membro. \\
 \hline
 
 UC-03 & 2 & Consultar diretório da equipe & Membro & Painel de membros ativos filtrados por campus, diretoria e squad, com indicadores consolidados de horas e engajamento por área. \\
@@ -81,7 +84,7 @@ UC-03 & 2 & Consultar diretório da equipe & Membro & Painel de membros ativos f
 UC-04 & 2 & Consultar quadro de avisos & Membro & Consulta de avisos direcionados a toda a instituição ou restritos à diretoria do membro. \\
 \hline
 
-UC-05 & 1 & Gerenciar calendário & Membro & Gestão de eventos corporativos (Reuniões Gerais e treinamentos) e agendamento de reuniões individuais (1-on-1), com verificação de choque de horário. \\
+UC-05 & 1 & Gerenciar calendário & Membro & Gestão de eventos corporativos (Reuniões Gerais e treinamentos) e agendamento de reuniões, com verificação de choque de horário. \\
 \hline
 
 UC-06 & 1 & Contestar ocorrência & Membro & Submissão de justificativa formal contra uma ocorrência disciplinar recebida, mantendo-a como pendente até o julgamento. \\
@@ -105,19 +108,19 @@ UC-11 & 1 & Julgar contestação & Diretor de G\&G & Análise das contestações
 UC-12 & 1 & Parametrizar regras de horas & Diretor de G\&G & Configuração da carga horária de extensão por período para cada cargo e função do organograma. \\
 \hline
 
-UC-13 & 2 & Contabilizar horas e tempo de casa & Diretor de G\&G & Somatório das horas de extensão com base nas datas de exercício dos cargos e cômputo do tempo de casa do membro. \\
+UC-13 & 2 & Contabilizar horas de extensão & Diretor de G\&G & Somatório das horas de extensão com base nas datas de exercício dos cargos e cômputo do tempo de empresa do membro. \\
 \hline
 
 UC-14 & 4 & Enviar horas ao professor orientador & Diretor de G\&G; Professor orientador & Agrupamento das horas contabilizadas e envio formal por e-mail ao professor orientador, para lançamento no SIGAA. Inclui UC-13. \\
 \hline
 
-UC-15 & 1 & Registrar ocorrência disciplinar & Gerente; Diretor & Registro de infração com pontuação, cálculo automático da data de expiração e do agravante de reincidência. \\
+UC-15 & 1 & Registrar ocorrência disciplinar & Gerente & Registro de infração com pontuação, cálculo automático da data de expiração e do agravante de reincidência. \\
 \hline
 
-UC-16 & 1 & Gerenciar funil comercial e clientes & Gerente; Diretor & Cadastro e consulta de clientes e acompanhamento das oportunidades nas etapas do funil de vendas. \\
+UC-16 & 1 & Gerenciar funil comercial & Diretor Comercial & Acompanhamento das oportunidades nas etapas do funil de vendas, do primeiro contato ao fechamento. \\
 \hline
 
-UC-17 & 1 & Gerenciar projetos e tarefas & Gerente; Diretor; GitHub & Cadastro e acompanhamento de projetos e tarefas, com vínculo aos repositórios do GitHub. \\
+UC-17 & 1 & Gerenciar projetos e tarefas & Gerente; GitHub & Cadastro e acompanhamento de projetos e tarefas, com vínculo aos repositórios do GitHub. \\
 \hline
 
 UC-18 & 1 & Propor mudança de governança & Diretor & Registro de proposta de alteração de regras ou estrutura da empresa para análise da diretoria. \\
@@ -130,6 +133,18 @@ UC-20 & 1 & Gerenciar lançamentos financeiros & Diretor Financeiro & Registro e
 \hline
 
 UC-21 & 1 & Aprovar reembolso & Diretor Financeiro & Análise e aprovação (ou rejeição) de solicitações de reembolso. \\
+\hline
+
+UC-22 & 1 & Gerenciar orçamento das diretorias & Diretor Financeiro & Definição e acompanhamento do orçamento semestral de cada diretoria, com o valor já utilizado. \\
+\hline
+
+UC-23 & 1 & Gerenciar clientes & Diretor Comercial & Cadastro e consulta dos clientes, com dados de contato e histórico de interações. \\
+\hline
+
+UC-24 & 1 & Gerenciar propostas e contratos & Diretor Comercial & Registro das propostas comerciais e suas versões e dos contratos fechados, com vigência, valor e parcelas. \\
+\hline
+
+UC-25 & 1 & Gerenciar squads & Diretor & Criação e manutenção dos squads e alocação dos membros em cada um. \\
 \hline
 \end{longtable}
 \end{center}
@@ -166,7 +181,7 @@ Link para o DCU: \url{https://drive.google.com/file/d/1It3V4zqqA9LMgIkKsWDLE538F
 
 \textbf{RN05 - Caducidade e Agravamento de Penalidades}: Toda ocorrência disciplinar possui data de validade definida no ato de lançamento; reincidências ocorridas dentro do prazo de vigência acarretam a incidência do multiplicador agravante automático.
 
-\textbf{RN06 - Incompatibilidade de Agendamentos}: O sistema deve impedir a confirmação de reuniões individuais caso um dos participantes conste como confirmado em outro compromisso formal ou Reunião Geral no mesmo horário.
+\textbf{RN06 - Incompatibilidade de Agendamentos}: O sistema deve impedir a confirmação de reuniões caso um dos participantes conste como confirmado em outro compromisso formal ou Reunião Geral no mesmo horário.
 
 \textbf{RN07 - Registro de Ocorrências}: Somente Gerentes e Diretores podem registrar ocorrências disciplinares, e o membro afetado deve ser notificado do lançamento para que possa contestá-lo.
 
@@ -198,14 +213,14 @@ O sistema deve implementar autenticação baseada em perfis de acesso, restringi
 \textbf{RNF04 - Criptografia de Dados}\\
 \textbf{Categoria:} Segurança\\
 \textbf{Prioridade:} Essencial\\
-Senhas de acesso devem ser protegidas por algoritmos de hash com salgamento seguro (BCrypt/Argon2) e campos de documentos civis sensíveis devem trafegar e repousar sob criptografia.
+Senhas de acesso devem ser protegidas por algoritmos de hash com salvamento seguro e documentos sensíveis devem trafegar e repousar sob criptografia.
 
 \textbf{RNF05 - Responsividade e Usabilidade}\\
 \textbf{Categoria:} Facilidade de uso\\
 \textbf{Prioridade:} Essencial\\
 A interface gráfica de usuário deve ser responsiva, adaptando-se sem quebra de leiaute a diferentes resoluções de notebooks, computadores e smartphones.
 
-\textbf{RNF06 - Trilha de Auditoria (Logs)}\\
+\textbf{RNF06 - Auditoria (Logs)}\\
 \textbf{Categoria:} Confiabilidade\\
 \textbf{Prioridade:} Importante\\
 Todas as rotinas de manipulação, alteração de horas, julgamento de contestações, aprovação de reembolsos e votações de governança devem gravar logs imutáveis contendo data, hora e identificação do autor da operação.
