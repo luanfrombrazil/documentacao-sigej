@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram id="d1" name="SIGEJ — Diagrama de classes (com atributos)">
-    <mxGraphModel dx="2049" dy="1196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2894" pageHeight="4066" background="#FFFFFF" math="0" shadow="0">
+    <mxGraphModel dx="6764" dy="3504" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2894" pageHeight="4066" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -94,11 +94,41 @@
         <mxCell id="7eRINre3-A08CwtPm3O3-15" edge="1" parent="1" source="c_Diretoria" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;startArrow=none;endArrow=none;" target="c_Evento">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="7eRINre3-A08CwtPm3O3-15_card0" connectable="0" parent="7eRINre3-A08CwtPm3O3-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-3.8" y="-22.5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7eRINre3-A08CwtPm3O3-15_card1" connectable="0" parent="7eRINre3-A08CwtPm3O3-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-16.9" y="15.3" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="7eRINre3-A08CwtPm3O3-22" edge="1" parent="1" source="c_Diretoria" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;startArrow=none;endArrow=none;" target="7eRINre3-A08CwtPm3O3-19">
           <mxGeometry relative="1" x="0.0001" as="geometry" />
         </mxCell>
+        <mxCell id="7eRINre3-A08CwtPm3O3-22_card0" connectable="0" parent="7eRINre3-A08CwtPm3O3-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="18.9" y="-12.7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7eRINre3-A08CwtPm3O3-22_card1" connectable="0" parent="7eRINre3-A08CwtPm3O3-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-20.9" y="-9.2" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="7eRINre3-A08CwtPm3O3-29" edge="1" parent="1" source="c_Diretoria" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;startArrow=none;endArrow=none;" target="c_PropostaGovernanca">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7eRINre3-A08CwtPm3O3-29_card0" connectable="0" parent="7eRINre3-A08CwtPm3O3-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-19.4" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7eRINre3-A08CwtPm3O3-29_card1" connectable="0" parent="7eRINre3-A08CwtPm3O3-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="19.4" y="12" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="c_Diretoria" parent="1" style="swimlane;fontStyle=1;fontColor=#222222;align=center;verticalAlign=top;spacingTop=4;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=14;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#222222;" value="Diretoria" vertex="1">
           <mxGeometry height="56" width="150" x="1960" y="3480" as="geometry" />
@@ -586,10 +616,30 @@
             <mxPoint x="2396" y="3215" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e0_card0" connectable="0" parent="e0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-20.8" y="9.3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e0_card1" connectable="0" parent="e0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-7" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e1" edge="1" parent="1" source="c_Membro" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=diamondThin;startFill=1;startSize=16;endArrow=none;" target="c_Conta" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1833" y="2987" as="sourcePoint" />
             <mxPoint x="2076" y="3215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1_card0" connectable="0" parent="e1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-20.7" y="-9.7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1_card1" connectable="0" parent="e1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="5" y="-12" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e4" edge="1" parent="1" source="c_Membro" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=diamondThin;startFill=1;startSize=16;endArrow=none;" target="c_Desligamento" value="">
@@ -598,10 +648,30 @@
             <mxPoint x="1325" y="3215" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e4_card0" connectable="0" parent="e4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-5.3" y="-22.2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4_card1" connectable="0" parent="e4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="21.6" y="7.4" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e6" edge="1" parent="1" source="c_Membro" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Squad" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1650" y="2680" as="sourcePoint" />
             <mxPoint x="2218" y="3215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6_card0" connectable="0" parent="e6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-8.6" y="-21.1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6_card1" connectable="0" parent="e6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-13.2" y="18.6" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e7" edge="1" parent="1" source="c_Diretoria" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_HistoricoCargo" value="">
@@ -610,10 +680,30 @@
             <mxPoint x="1933" y="3627.3" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e7_card0" connectable="0" parent="e7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-17.1" y="-15.1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7_card1" connectable="0" parent="e7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="8" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e8" edge="1" parent="1" source="c_Membro" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;entryX=0.5034;entryY=0.0000;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=diamondThin;startFill=1;startSize=16;endArrow=none;" target="c_HistoricoCargo" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1775" y="2987" as="sourcePoint" />
             <mxPoint x="1897" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8_card0" connectable="0" parent="e8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="11" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8_card1" connectable="0" parent="e8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="11" y="-20" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e9" edge="1" parent="1" source="c_HistoricoCargo" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Cargo" value="">
@@ -622,10 +712,30 @@
             <mxPoint x="1897" y="3627.3" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e9_card0" connectable="0" parent="e9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-13" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9_card1" connectable="0" parent="e9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="11" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e11" edge="1" parent="1" source="c_LoteEnvioHoras" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;startFill=0;startSize=16;endArrow=none;" target="c_HistoricoCargo" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1036.0000000000005" y="3258.95" as="sourcePoint" />
             <mxPoint x="1749.0023999999999" y="3610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11_card0" connectable="0" parent="e11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="11" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11_card1" connectable="0" parent="e11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-12" y="-12" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e15" edge="1" parent="1" source="c_Membro" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_TermoJuridico" value="">
@@ -634,10 +744,30 @@
             <mxPoint x="1527" y="3215" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e15_card0" connectable="0" parent="e15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-10.8" y="-20.1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15_card1" connectable="0" parent="e15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="22.8" y="1.7" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e16" edge="1" parent="1" source="c_TermoJuridico" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_ModeloDocumento" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1527" y="3393" as="sourcePoint" />
             <mxPoint x="1527" y="3621" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16_card0" connectable="0" parent="e16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-10" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16_card1" connectable="0" parent="e16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="13" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e17" edge="1" parent="1" source="c_Ocorrencia" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Infracao" value="">
@@ -646,10 +776,30 @@
             <mxPoint x="1445" y="2178" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e17_card0" connectable="0" parent="e17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-10" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17_card1" connectable="0" parent="e17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="14" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e18" edge="1" parent="1" source="c_Membro" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Ocorrencia" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1650" y="2683" as="sourcePoint" />
             <mxPoint x="1120" y="2400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18_card0" connectable="0" parent="e18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-0.9" y="-22.8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18_card1" connectable="0" parent="e18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="19.7" y="11.5" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e20" edge="1" parent="1" source="c_Ocorrencia" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=diamondThin;startFill=1;startSize=16;endArrow=none;" target="c_Contestacao" value="">
@@ -658,10 +808,30 @@
             <mxPoint x="1266" y="2178.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e20_card0" connectable="0" parent="e20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="11" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20_card1" connectable="0" parent="e20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="11" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e23" edge="1" parent="1" source="c_Aviso" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Diretoria" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2310" y="2357" as="sourcePoint" />
             <mxPoint x="2501" y="2784" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23_card0" connectable="0" parent="e23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="11" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23_card1" connectable="0" parent="e23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="11" y="14" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e29" edge="1" parent="1" source="7eRINre3-A08CwtPm3O3-3" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Squad" value="">
@@ -670,10 +840,30 @@
             <mxPoint x="1568" y="2683" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e29_card0" connectable="0" parent="e29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="15.9" y="16.3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e29_card1" connectable="0" parent="e29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="5" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e31" edge="1" parent="1" source="c_Projeto" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=diamondThin;startFill=1;startSize=16;endArrow=none;" target="7eRINre3-A08CwtPm3O3-3" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="584" y="1925.7" as="sourcePoint" />
             <mxPoint x="427.0039999999999" y="2110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e31_card0" connectable="0" parent="e31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-20" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e31_card1" connectable="0" parent="e31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="8" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e33" edge="1" parent="1" source="c_Tarefa" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="7eRINre3-A08CwtPm3O3-3" value="">
@@ -682,10 +872,30 @@
             <mxPoint x="465" y="2683" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e33_card0" connectable="0" parent="e33" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-3" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e33_card1" connectable="0" parent="e33" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-18.6" y="13.2" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e35" edge="1" parent="1" source="c_Oportunidade" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Membro" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2508" y="306" as="sourcePoint" />
             <mxPoint x="1979" y="2683" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e35_card0" connectable="0" parent="e35" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-22.7" y="2.5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e35_card1" connectable="0" parent="e35" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="10" y="-20.5" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e36" edge="1" parent="1" source="c_Oportunidade" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Cliente" value="">
@@ -694,10 +904,30 @@
             <mxPoint x="2429" y="534" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e36_card0" connectable="0" parent="e36" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="20" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e36_card1" connectable="0" parent="e36" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-20" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e37" edge="1" parent="1" source="c_Cliente" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_PropostaComercial" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2447" y="730" as="sourcePoint" />
             <mxPoint x="2621" y="958" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e37_card0" connectable="0" parent="e37" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="20" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e37_card1" connectable="0" parent="e37" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-20" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e38" edge="1" parent="1" source="c_PropostaComercial" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Contrato" value="">
@@ -706,10 +936,30 @@
             <mxPoint x="2700" y="1346.7" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e38_card0" connectable="0" parent="e38" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e38_card1" connectable="0" parent="e38" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-22.3" y="4.9" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e39" edge="1" parent="1" source="c_Contrato" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Projeto" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2680" y="1506.7" as="sourcePoint" />
             <mxPoint x="650" y="1783.7" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e39_card0" connectable="0" parent="e39" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-14.5" y="-17.6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e39_card1" connectable="0" parent="e39" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="17" y="-3" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e40" edge="1" parent="1" source="c_Contrato" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;exitX=0.6639;exitY=1.0000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5039;entryY=0.0000;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=diamondThin;startFill=1;startSize=16;endArrow=none;" target="c_Parcela" value="">
@@ -718,10 +968,30 @@
             <mxPoint x="2720" y="1780.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e40_card0" connectable="0" parent="e40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="11.6" y="19.7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e40_card1" connectable="0" parent="e40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="10" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e41" edge="1" parent="1" source="c_Parcela" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_LancamentoFinanceiro" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2720" y="1904.5" as="sourcePoint" />
             <mxPoint x="2708" y="2184.3" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e41_card0" connectable="0" parent="e41" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="11" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e41_card1" connectable="0" parent="e41" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="11" y="-14" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e42" edge="1" parent="1" source="c_LancamentoFinanceiro" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="7eRINre3-A08CwtPm3O3-19" value="">
@@ -730,10 +1000,30 @@
             <mxPoint x="2451" y="2784" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e42_card0" connectable="0" parent="e42" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="11" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e42_card1" connectable="0" parent="e42" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="19" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e45" edge="1" parent="1" source="c_Reembolso" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_LancamentoFinanceiro" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2525" y="1950" as="sourcePoint" />
             <mxPoint x="2774" y="2184.3" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e45_card0" connectable="0" parent="e45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="19.9" y="-11.1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e45_card1" connectable="0" parent="e45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-19.9" y="11.1" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e48" edge="1" parent="1" source="c_PropostaGovernanca" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=diamondThin;startFill=1;startSize=16;endArrow=none;" target="c_Voto" value="">
@@ -742,16 +1032,46 @@
             <mxPoint x="2103" y="2214.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e48_card0" connectable="0" parent="e48" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-18.5" y="-13.3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e48_card1" connectable="0" parent="e48" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="10" y="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e49" edge="1" parent="1" source="c_Voto" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Membro" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2160" y="2330" as="sourcePoint" />
             <mxPoint x="1842" y="2683" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e49_card0" connectable="0" parent="e49" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="2" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e49_card1" connectable="0" parent="e49" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="19.4" y="12.1" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="e50" edge="1" parent="1" source="c_RegistroAuditoria" style="edgeStyle=none;rounded=0;html=1;strokeColor=#222222;strokeWidth=1.25;fontSize=11;startArrow=none;endArrow=none;" target="c_Membro" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="856" y="2215.95" as="sourcePoint" />
             <mxPoint x="2006" y="2700.4999999999995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e50_card0" connectable="0" parent="e50" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="5" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e50_card1" connectable="0" parent="e50" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-18.9" y="-12.8" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7eRINre3-A08CwtPm3O3-3" parent="1" style="swimlane;fontStyle=1;fontColor=#222222;align=center;verticalAlign=top;spacingTop=4;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=14;fillColor=#FFFFFF;swimlaneFillColor=#FFFFFF;strokeColor=#222222;" value="Sprint" vertex="1">
@@ -781,15 +1101,45 @@
         <mxCell id="7eRINre3-A08CwtPm3O3-23" edge="1" parent="1" source="c_Tarefa" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;startArrow=none;endArrow=none;" target="c_Membro">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="7eRINre3-A08CwtPm3O3-23_card0" connectable="0" parent="7eRINre3-A08CwtPm3O3-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="12.6" y="19.1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7eRINre3-A08CwtPm3O3-23_card1" connectable="0" parent="7eRINre3-A08CwtPm3O3-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-12.6" y="-19.1" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="7eRINre3-A08CwtPm3O3-13" edge="1" parent="1" source="c_Participacao" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;startArrow=none;endArrow=none;" target="c_Evento">
           <mxGeometry relative="1" x="-0.8461" as="geometry">
             <mxPoint x="2210" y="2919" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="7eRINre3-A08CwtPm3O3-13_card0" connectable="0" parent="7eRINre3-A08CwtPm3O3-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="18" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7eRINre3-A08CwtPm3O3-13_card1" connectable="0" parent="7eRINre3-A08CwtPm3O3-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-22.5" y="3.8" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="7eRINre3-A08CwtPm3O3-27" edge="1" parent="1" source="c_Membro" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;startArrow=none;endArrow=none;" target="c_Participacao">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-      <mxCell id="7eRINre3-A08CwtPm3O3-15_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-15"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-3.8" y="-22.5" as="offset"/></mxGeometry></mxCell><mxCell id="7eRINre3-A08CwtPm3O3-15_card1" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-15"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-16.9" y="15.3" as="offset"/></mxGeometry></mxCell><mxCell id="7eRINre3-A08CwtPm3O3-22_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-22"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="18.9" y="-12.7" as="offset"/></mxGeometry></mxCell><mxCell id="7eRINre3-A08CwtPm3O3-22_card1" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-22"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-20.9" y="-9.2" as="offset"/></mxGeometry></mxCell><mxCell id="7eRINre3-A08CwtPm3O3-29_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-29"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-19.4" y="-12.0" as="offset"/></mxGeometry></mxCell><mxCell id="7eRINre3-A08CwtPm3O3-29_card1" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-29"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="19.4" y="12.0" as="offset"/></mxGeometry></mxCell><mxCell id="e0_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e0"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-20.8" y="9.3" as="offset"/></mxGeometry></mxCell><mxCell id="e0_card1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e0"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="3.3" y="-22.6" as="offset"/></mxGeometry></mxCell><mxCell id="e1_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e1"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-20.7" y="-9.7" as="offset"/></mxGeometry></mxCell><mxCell id="e1_card1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e1"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="19.3" y="-12.2" as="offset"/></mxGeometry></mxCell><mxCell id="e4_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e4"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-5.3" y="-22.2" as="offset"/></mxGeometry></mxCell><mxCell id="e4_card1" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e4"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="21.6" y="7.4" as="offset"/></mxGeometry></mxCell><mxCell id="e6_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e6"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-8.6" y="-21.1" as="offset"/></mxGeometry></mxCell><mxCell id="e6_card1" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e6"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-13.2" y="18.6" as="offset"/></mxGeometry></mxCell><mxCell id="e7_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e7"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-17.1" y="-15.1" as="offset"/></mxGeometry></mxCell><mxCell id="e7_card1" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e7"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="21.9" y="-6.4" as="offset"/></mxGeometry></mxCell><mxCell id="e8_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e8"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="11.0" y="20.0" as="offset"/></mxGeometry></mxCell><mxCell id="e8_card1" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e8"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="11.0" y="-20.0" as="offset"/></mxGeometry></mxCell><mxCell id="e9_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e9"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-22.6" y="-3.1" as="offset"/></mxGeometry></mxCell><mxCell id="e9_card1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e9"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="14.7" y="-17.4" as="offset"/></mxGeometry></mxCell><mxCell id="e11_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e11"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="20.8" y="-9.4" as="offset"/></mxGeometry></mxCell><mxCell id="e11_card1" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e11"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-19.1" y="-12.5" as="offset"/></mxGeometry></mxCell><mxCell id="e15_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e15"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-10.8" y="-20.1" as="offset"/></mxGeometry></mxCell><mxCell id="e15_card1" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e15"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="22.8" y="1.7" as="offset"/></mxGeometry></mxCell><mxCell id="e16_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e16"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-19.4" y="-12.1" as="offset"/></mxGeometry></mxCell><mxCell id="e16_card1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e16"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="20.6" y="-9.9" as="offset"/></mxGeometry></mxCell><mxCell id="e17_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e17"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-19.9" y="-11.2" as="offset"/></mxGeometry></mxCell><mxCell id="e17_card1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e17"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="20.1" y="-10.8" as="offset"/></mxGeometry></mxCell><mxCell id="e18_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e18"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-0.9" y="-22.8" as="offset"/></mxGeometry></mxCell><mxCell id="e18_card1" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e18"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="19.7" y="11.5" as="offset"/></mxGeometry></mxCell><mxCell id="e20_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e20"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="11.0" y="-20.0" as="offset"/></mxGeometry></mxCell><mxCell id="e20_card1" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e20"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="11.0" y="20.0" as="offset"/></mxGeometry></mxCell><mxCell id="e23_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e23"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="11.0" y="-20.0" as="offset"/></mxGeometry></mxCell><mxCell id="e23_card1" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e23"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="11.0" y="20.0" as="offset"/></mxGeometry></mxCell><mxCell id="e29_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e29"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="15.9" y="16.3" as="offset"/></mxGeometry></mxCell><mxCell id="e29_card1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e29"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="5.3" y="-22.2" as="offset"/></mxGeometry></mxCell><mxCell id="e31_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e31"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-20.0" y="-11.0" as="offset"/></mxGeometry></mxCell><mxCell id="e31_card1" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e31"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="20.0" y="-11.0" as="offset"/></mxGeometry></mxCell><mxCell id="e33_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e33"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-1.1" y="-22.8" as="offset"/></mxGeometry></mxCell><mxCell id="e33_card1" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e33"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-18.6" y="13.2" as="offset"/></mxGeometry></mxCell><mxCell id="e35_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e35"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-22.7" y="2.5" as="offset"/></mxGeometry></mxCell><mxCell id="e35_card1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e35"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="10.0" y="-20.5" as="offset"/></mxGeometry></mxCell><mxCell id="e36_card0" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e36"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="20.0" y="-11.0" as="offset"/></mxGeometry></mxCell><mxCell id="e36_card1" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e36"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-20.0" y="-11.0" as="offset"/></mxGeometry></mxCell><mxCell id="e37_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e37"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="20.0" y="-11.0" as="offset"/></mxGeometry></mxCell><mxCell id="e37_card1" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e37"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-20.0" y="-11.0" as="offset"/></mxGeometry></mxCell><mxCell id="e38_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e38"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="7.8" y="-21.4" as="offset"/></mxGeometry></mxCell><mxCell id="e38_card1" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e38"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-22.3" y="4.9" as="offset"/></mxGeometry></mxCell><mxCell id="e39_card0" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e39"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-14.5" y="-17.6" as="offset"/></mxGeometry></mxCell><mxCell id="e39_card1" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e39"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="22.7" y="-2.8" as="offset"/></mxGeometry></mxCell><mxCell id="e40_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e40"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="11.6" y="19.7" as="offset"/></mxGeometry></mxCell><mxCell id="e40_card1" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e40"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="10.4" y="-20.3" as="offset"/></mxGeometry></mxCell><mxCell id="e41_card0" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e41"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="11.0" y="20.0" as="offset"/></mxGeometry></mxCell><mxCell id="e41_card1" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e41"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="11.0" y="-20.0" as="offset"/></mxGeometry></mxCell><mxCell id="e42_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e42"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="11.0" y="20.0" as="offset"/></mxGeometry></mxCell><mxCell id="e42_card1" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e42"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="11.0" y="-20.0" as="offset"/></mxGeometry></mxCell><mxCell id="e45_card0" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e45"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="19.9" y="-11.1" as="offset"/></mxGeometry></mxCell><mxCell id="e45_card1" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e45"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-19.9" y="11.1" as="offset"/></mxGeometry></mxCell><mxCell id="e48_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e48"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-18.5" y="-13.3" as="offset"/></mxGeometry></mxCell><mxCell id="e48_card1" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e48"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="18.5" y="13.3" as="offset"/></mxGeometry></mxCell><mxCell id="e49_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e49"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="-0.2" y="-22.8" as="offset"/></mxGeometry></mxCell><mxCell id="e49_card1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e49"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="19.4" y="12.1" as="offset"/></mxGeometry></mxCell><mxCell id="e50_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e50"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="21.0" y="-9.1" as="offset"/></mxGeometry></mxCell><mxCell id="e50_card1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="e50"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-18.9" y="-12.8" as="offset"/></mxGeometry></mxCell><mxCell id="7eRINre3-A08CwtPm3O3-23_card0" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-23"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="12.6" y="19.1" as="offset"/></mxGeometry></mxCell><mxCell id="7eRINre3-A08CwtPm3O3-23_card1" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-23"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-12.6" y="-19.1" as="offset"/></mxGeometry></mxCell><mxCell id="7eRINre3-A08CwtPm3O3-13_card0" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-13"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="22.5" y="-3.8" as="offset"/></mxGeometry></mxCell><mxCell id="7eRINre3-A08CwtPm3O3-13_card1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-13"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-22.5" y="3.8" as="offset"/></mxGeometry></mxCell><mxCell id="7eRINre3-A08CwtPm3O3-27_card0" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-27"><mxGeometry x="-1" relative="1" as="geometry"><mxPoint x="22.0" y="-6.1" as="offset"/></mxGeometry></mxCell><mxCell id="7eRINre3-A08CwtPm3O3-27_card1" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" vertex="1" connectable="0" parent="7eRINre3-A08CwtPm3O3-27"><mxGeometry x="1" relative="1" as="geometry"><mxPoint x="-17.0" y="-15.3" as="offset"/></mxGeometry></mxCell></root>
+        <mxCell id="7eRINre3-A08CwtPm3O3-27_card0" connectable="0" parent="7eRINre3-A08CwtPm3O3-27" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="22" y="-6.1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7eRINre3-A08CwtPm3O3-27_card1" connectable="0" parent="7eRINre3-A08CwtPm3O3-27" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontSize=11;fontColor=#000000;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-17" y="-15.3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
     </mxGraphModel>
   </diagram>
 </mxfile>
